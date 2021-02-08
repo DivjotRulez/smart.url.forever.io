@@ -15,6 +15,7 @@
         function remove()   {
             const video = document.getElementById('video');
             video.classList.remove('show');
+            $('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
         }
     </script>
     <title>Sagnik-Forever</title>
@@ -95,7 +96,7 @@
     <div class="video" id="video">
         <div class="bgcolor" onclick="remove()"></div>
         <div class="iframe-container">
-            <iframe width="720" height="405" src="https://www.youtube.com/embed/GE9nmbzdZgc?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="youtube-video" width="720" height="405" src="https://www.youtube.com/embed/GE9nmbzdZgc?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 </body>
