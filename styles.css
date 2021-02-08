@@ -105,6 +105,11 @@ body{
     overflow: hidden;
 }
 
+.music-link:hover{
+    cursor: pointer;
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
 .music-link:last-child {
     border-bottom: none;
 }
@@ -131,19 +136,31 @@ body{
     color: white;
 }
 
-/* .iframe-container{
-    position: relative;
-    width: 100%;
+.iframe-container {
+    z-index: 5570;
+    transform: translateZ(0) scale(1);
+    opacity: 1;
+    display: block;
+    position: fixed;
+    justify-content: center;
+    width: 50%;
     padding-bottom: 56.25%; 
     height: 0;
+    align-items: center;
+    text-align: center;
+    top: 15%;
+    
   }
   .iframe-container iframe{
+    z-index: 5575;
+    justify-content: center;
     position: absolute;
     top:0;
     left: 0;
     width: 100%;
-    height: 100%;
-  } */
+    height: 50%;
+    align-items: center;
+  }
 
   a{
     color: inherit;
@@ -195,4 +212,56 @@ body{
     border-radius: 50%;
     color: white;
     background-color: rgb(255, 0, 0);
+}
+
+.bgcolor{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.753);
+    z-index: 5565;
+}
+
+.video{
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 5560;
+    transition: 400ms;
+}
+
+.video.show{
+    display: flex;
+    transition: 500ms;
+}
+
+#playbtn{
+    display: block;
+    position: absolute;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    border-radius: 5px 5px 0 0;
+    justify-content: center;
+    align-items: center;
+    top: 0.9%;
+    transition: 400ms;
+    cursor: pointer;
+    color: rgba(26, 25, 25, 0.651);
+
+}
+
+#ytbtn{
+    
+    cursor: pointer;
+}
+#playbtn:hover{
+    background: rgba(0, 0, 0, 0.61);
+    color: rgb(255, 255, 255);
 }
