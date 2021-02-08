@@ -16,9 +16,6 @@
             const video = document.getElementById('video');
             video.classList.remove('show');
         }
-        $('a.pause-video').click(function(){
-	$('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
-});
     </script>
     <title>Sagnik-Forever</title>
 </head>
@@ -96,11 +93,9 @@
     </div>
     
     <div class="video" id="video">
-        <a href="#" class="pause-video">
-            <div class="bgcolor" onclick="remove()"></div>
-        </a>
+        <div class="bgcolor" onclick="remove()"></div>
         <div class="iframe-container">
-            <iframe class="youtube-video" width="720" height="405" src="https://www.youtube.com/embed/GE9nmbzdZgc?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="720" height="405" src="https://www.youtube.com/embed/GE9nmbzdZgc?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 </body>
